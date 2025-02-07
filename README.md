@@ -1,154 +1,88 @@
-# DUST: Dynamic Unified Structured Tensors
+# Next-Generation Extensible Data Backbone
 
-DUST (Dynamic Unified Structured Tensors) is a groundbreaking framework for organizing, updating, and querying complex, multi-dimensional data structures efficiently. Designed for relational intelligence, DUST provides a robust platform for managing tensor-based data models in real-time.
+Welcome to the Next-Generation Extensible Data Backbone project! This repository contains the whitepaper and supporting documentation for our innovative architecture that unifies graph data points, hierarchical JSON structures, SQL/NoSQL databases, and DAG blockchain technology (using Nano or Banano) into a trust-driven, extensible data ecosystem.
 
-## Key Features
+## Table of Contents
 
-- **Dynamic Tensor Creation:** Seamlessly create and manage tensors for storing multi-dimensional data.
-- **Efficient Updates:** Update tensor values dynamically, with support for automatic resizing.
-- **Intuitive Querying:** Retrieve specific values or entire tensors with simple queries.
-- **Master Tensor Indexing:** Maintain an organized system of tensors with metadata.
-- **Extensibility:** Ready for integration with RGNNs (Relational Graph Neural Networks) and other advanced AI models.
+- [Overview](#overview)
+- [Features](#features)
+- [Architecture](#architecture)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-## Getting Started
+## Overview
 
-### Prerequisites
+Modern enterprises face unprecedented challenges in managing complex, interconnected, and time-variant data. Our solution addresses these challenges by integrating multiple paradigms into one cohesive system:
 
-- Python 3.8+
-- Flask
-- NumPy
+- **Graph Data Points:** For modeling complex relationships.
+- **Hierarchical JSON Structures:** For flexible and human-readable data representation.
+- **SQL/NoSQL Databases:** For robust storage and high-performance querying of both structured and unstructured data.
+- **DAG Blockchain Integration:** For immutable time-stamping, version control, and trust verification using fee-less blockchains like Nano—or even Banano, for its unique community benefits.
 
-Install dependencies:
+This architecture is designed for developers, researchers, and enterprise stakeholders eager to explore the future of data intelligence.
 
-```bash
-pip install flask numpy
-```
+## Features
 
-### Running the Application
+- **Dynamic Relationship Mapping:** Leverage graph data points to capture and traverse complex interconnections.
+- **Flexible Data Modeling:** Use hierarchical JSON to represent nested data structures seamlessly.
+- **Robust Storage Solutions:** Combine the power of SQL (for structured data) and NoSQL (for unstructured or semi-structured data) into one system.
+- **Immutable Trust Layer:** Integrate a DAG blockchain for verifiable and tamper-proof recording of data events.
+- **Enhanced Security:** End-to-end encryption, federated access controls, and blockchain-backed audit trails ensure data integrity.
+- **Scalability and Extensibility:** Built to easily integrate with existing systems and evolve with emerging technologies.
 
-1. Clone the repository:
+## Architecture
 
-   ```bash
-   git clone https://github.com/yourusername/dust.git
-   cd dust
-   ```
-2. Start the Flask application:
+Our architecture is based on a multi-layered approach:
 
-   ```bash
-   python app.py
-   ```
-3. Use `curl` or any API client (e.g., Postman) to interact with the endpoints.
+1. **Data Ingestion & Modeling:**  
+   Data enters as JSON payloads, which are mapped into graph nodes and edges to capture both hierarchical and relational information.
 
-## API Documentation
+2. **Storage Layer:**  
+   Dual support for SQL and NoSQL databases ensures optimal performance for both structured and unstructured data, with an optional dedicated graph database for enhanced relationship queries.
 
-### Endpoints
+3. **Blockchain Layer:**  
+   A DAG blockchain (Nano or Banano) is used to record immutable timestamps and version information, providing an unalterable trust layer for every data transaction.
 
-#### Create a Patient
+4. **Unified Query Interface:**  
+   A flexible query model that spans SQL-like queries, graph traversal, and blockchain-based temporal queries, enabling comprehensive data analytics.
 
-- **Endpoint:** `/create`
-- **Method:** `POST`
-- **Payload:**
-  ```json
-  {
-    "name": "Patient Name"
-  }
-  ```
-- **Response:**
-  ```json
-  {
-    "message": "Patient 'Name' added with tensor index X",
-    "master_tensor": [
-      {
-        "id": 1,
-        "name": "Patient Name",
-        "tensor_index": 0
-      }
-    ]
-  }
-  ```
-
-#### Update a Patient Tensor
-
-- **Endpoint:** `/update`
-- **Method:** `POST`
-- **Payload:**
-  ```json
-  {
-    "name": "Patient Name",
-    "updates": [[x, y, value], ...]
-  }
-  ```
-- **Response:**
-  ```json
-  {
-    "message": "Tensor updated for patient 'Name'",
-    "tensor": [[...], [...]]
-  }
-  ```
-
-#### Query a Patient Tensor
-
-- **Endpoint:** `/query`
-- **Method:** `GET`
-- **Parameters:**
-
-  - `name`: Patient name (required)
-  - `x`: X-coordinate (optional)
-  - `y`: Y-coordinate (optional)
-- **Response:**
-
-  - Specific value:
-    ```json
-    {
-      "value": 98.6
-    }
-    ```
-  - Full tensor:
-    ```json
-    {
-      "tensor": [[...], [...]]
-    }
-    ```
-
-#### Query Master Tensor
-
-- **Endpoint:** `/query_master`
-- **Method:** `GET`
-- **Response:**
-  ```json
-  {
-    "master_tensor": [
-      {
-        "id": 1,
-        "name": "Patient Name",
-        "tensor_index": 0
-      }
-    ]
-  }
-  ```
+For a complete technical deep-dive, please refer to our [Whitepaper](./Whitepaper.md).
 
 ## Roadmap
 
-### Short-Term Goals
+Our development roadmap includes:
 
-1. Add support for multi-dimensional tensors.
-2. Implement relationships between tensors (e.g., linking patients to doctors).
-3. Introduce anomaly detection features.
+- **Prototype Development:** Build an MVP integrating JSON-based ingestion, dual-database support, and a DAG blockchain layer.
+- **Pilot Programs:** Collaborate with strategic partners in finance, healthcare, cybersecurity, and AI for real-world testing.
+- **Optimization & Scaling:** Enhance interoperability and performance between SQL, NoSQL, and graph databases.
+- **Ecosystem Expansion:** Open up APIs for third-party integrations and further community-driven innovation.
 
-### Long-Term Goals
-
-1. Integrate with Plotly Dash for interactive visualizations.
-2. Deploy on cloud platforms with Docker support.
-3. Expand API functionality to include advanced querying and analytics.
+Stay tuned for more updates as we continue to develop and refine this groundbreaking platform.
 
 ## Contributing
 
-Contributions are welcome! Please fork the repository and submit a pull request.
+We welcome contributions from the community! To get started:
+
+1. **Fork** the repository.
+2. Create a **new branch** for your feature or bug fix.
+3. Submit a **pull request** with a detailed description of your changes.
+4. Follow our [CONTRIBUTING guidelines](./CONTRIBUTING.md) for coding standards and commit message conventions.
+
+For any questions or discussions, please open an issue or start a discussion on GitHub.
 
 ## License
 
-This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License**. See the LICENSE file for details.
+This project is licensed under the [MIT License](./LICENSE). Feel free to use and modify the code as per the license terms.
+
+## Contact
+
+For further information, collaboration opportunities, or inquiries, please contact:
+
+- **Your Name** – [your.email@example.com](mailto:your.email@example.com)
+- **GitHub Repository:** [https://github.com/yourusername/your-repo](https://github.com/yourusername/your-repo)
 
 ---
 
-Happy tinkering with DUST! 🚀
+Let’s build the future of data intelligence together!
