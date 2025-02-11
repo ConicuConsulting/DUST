@@ -48,10 +48,10 @@ sequenceDiagram
 ## **Security Considerations**
 
 ### **1. Why is this Secure?**
-✅ **No passwords**: Removes risk of phishing, credential leaks.
-✅ **Private key stays secure**: Only signatures are shared, never the private key.
-✅ **On-chain verification**: Provides **non-repudiable** proof of authentication.
-✅ **Zero-trust architecture**: Every session requires fresh authentication.
+- ✅ **No passwords**: Removes risk of phishing, credential leaks.
+- ✅ **Private key stays secure**: Only signatures are shared, never the private key.
+- ✅ **On-chain verification**: Provides **non-repudiable** proof of authentication.
+- ✅ **Zero-trust architecture**: Every session requires fresh authentication.
 
 ### **2. Preventing Attacks**
 - **Spoofing Attempts**: Impossible since only the wallet owner can produce a valid signature.
